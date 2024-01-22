@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #F8CB33;
+  --text-color: #707070;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+span,
+div,
+input,
+section,
+ul,
+li,
+ol,
+a {
+  font-family: 'poppins', sans-serif !important;
+}
+
+.container-auto {
+  max-width: 1068px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: 1468px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-bg {
+  background-image: url(../Assets/building-1727807_1920.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  max-height: 700px;
+}
+
+.hero-bg-filter {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+
+}
+
+/* Nav Bar */
+.nav-logo::before {
+  content: '';
+  width: 10px;
+  background: var(--primary-color);
+  height: 2px;
+  position: absolute;
+  left: 25%;
+  border-radius: 70px;
+}
+
+.nav-logo::after {
+  content: '';
+  width: 40px;
+  background: var(--primary-color);
+  height: 2px;
+  position: absolute;
+  border-radius: 70px;
+  top: 100%;
+  left: 30%;
+}
+
+.active {
+  width: max-content;
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  width: 100% !important;
+  background: var(--primary-color);
+  height: 2px;
+  border-radius: 70px;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+
+}
+
+.nav-menu-links ul li a:not(.active) {
+  position: relative;
+}
+
+.nav-menu-links ul li a:hover:not(.active) {
+  color: var(--primary-color);
+  transition: 1s;
+}
+
+.nav-menu-links ul li a:not(.active):after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--primary-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  top: 100%;
+}
+
+.nav-menu-links ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Hero Content */
+.title {
+  position: relative;
+
+}
+
+.title::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  border-radius: 70px;
+  background: var(--primary-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+/* About Us Section */
+.p-text {
+  color: var(--text-color);
+}
+
+.about-btn {
+  outline: 2px solid #000;
+  padding: 5px 8px;
+  transition: 1s;
+}
+
+.about-btn:hover {
+  background: #000;
+  color: #fff;
+  outline: 1px solid #fff;
+}
+
+/* Social icons */
+
+/* Images Section */
+.center-img-filter {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.img-btn {
+  outline: 1.5px solid #fff;
+  padding: 5px 7px;
+  transition: 1s;
+}
+
+.img-btn:hover {
+  background: #fff;
+  color: #000;
+
+}
+
+/* Post Section */
+.post {
+  border-left: 5px solid var(--primary-color);
+  padding-left: 20px;
+}
+
+.post-btn {
+  outline: 2px solid #000;
+  padding: 5px 7px;
+  transition: 1s;
+}
+
+.post-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Subscribe Section */
+.sub {
+  background: #E6E6E6;
+  width: 100%;
+}
+
+.sub-input input {
+  outline: 0;
+  width: 50%;
+  height: 50px;
+  border: 1px solid #000;
+  padding-left: 20px;
+}
+
+.sub-input button {
+  background: #000;
+  color: #fff;
+  transition: 1s;
+}
+
+.sub-input button:active {
+  background: #fff;
+  color: #000;
+  outline: 1px solid #000;
+}
+
+/* Footer */
