@@ -53,7 +53,7 @@ img {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  max-height: 700px;
+  max-height: 600px;
 }
 
 .hero-bg-filter {
@@ -126,10 +126,49 @@ img {
   top: 100%;
 }
 
+.nav-menu-links-ul {
+  color: #fff;
+  display: flex;
+}
+
 .nav-menu-links ul li a:hover::after {
   width: 100%;
   left: 0;
 }
+
+.menu-icons {
+  display: none;
+  font-size: 50px;
+  color: #fff;
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+@media screen and (max-width:700px) {
+  .nav-menu-links-ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    left: 62%;
+    top: 10%;
+    border-radius: 4px;
+  }
+
+  .menu-icons {
+    display: flex;
+  }
+
+  .open-menu {
+    display: flex;
+  }
+}
+
 
 /* Hero Content */
 .title {
@@ -148,6 +187,19 @@ img {
   left: 0;
 }
 
+@media screen and (max-width:765px) {
+  .hero-content {
+    text-align: center;
+  }
+
+
+  .hero-content h2 {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+
 /* About Us Section */
 .p-text {
   color: var(--text-color);
@@ -163,6 +215,44 @@ img {
   background: #000;
   color: #fff;
   outline: 1px solid #fff;
+}
+
+.about-us-right,
+.about-us-left {
+  width: 50%;
+}
+
+.about-us-left p {
+  padding-top: 10rem;
+  padding-left: 12rem;
+}
+
+
+
+@media screen and (max-width:700px) {
+  .about-main {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-us-right,
+  .about-us-left {
+    width: 100%;
+  }
+
+  .about-us-right h3,
+  .about-us-right p,
+  .about-us-right h5 {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .about-us-left {
+    padding: 40px;
+  }
 }
 
 /* Social icons */
@@ -187,6 +277,13 @@ img {
 
 }
 
+@media screen and (max-width:700px) {
+  .img-section {
+    flex-direction: column;
+  }
+
+}
+
 /* Post Section */
 .post {
   border-left: 5px solid var(--primary-color);
@@ -202,6 +299,13 @@ img {
 .post-btn:hover {
   background: #000;
   color: #fff;
+}
+
+@media screen and (max-width:700px) {
+  .posts {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 /* Subscribe Section */
